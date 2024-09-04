@@ -26,7 +26,6 @@ public class ParserService(IHttpClientFactory clientFactory, ILogger<ParserServi
                     string orderNumber = cells[0].InnerText;
                     string regNumber = cells[1].InnerText;
                     string snils = cells[2].InnerText;
-                    string status = cells[7].InnerText;
                     if (String.IsNullOrEmpty(regNumber))
                     {
                         logger.LogWarning("Регистрационный номер не найден. Ccылка на страницу: " + url);

@@ -61,6 +61,7 @@ public class TelegramListener(
             case "/start":
                 ReplyKeyboardMarkup keyboard = MakeKeyboard([["Проверить статус"], ["Подписаться", "Отписаться"]]);
                 await notificationService.NotifyAsync(message.Chat.Id, "Привет! Чем могу помочь?", replyMarkup: keyboard, cancellationToken: cancellationToken);
+                _currentContext = null;
                 break;
             case "Отписаться":
                 if (!await subscriptionService.IsSubscribedAsync(message.Chat.Id))
