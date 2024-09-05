@@ -5,9 +5,9 @@ meta:
     name: docker
     version: latest
 build:
-  dockerfile: /misis-tg/Dockerfile
+  dockerfile: ./misis-tg/Dockerfile
   skip: false
 run:
   persistenceMount: /data
-  containerPort: 8011
+  containerPort: 8080
   command: -u root --name misis-tg -v /data/4bb1be19-6baf-40ce-9bf9-784d4afcf59a/:/root/.microsoft/usersecrets/4bb1be19-6baf-40ce-9bf9-784d4afcf59a/:ro
