@@ -10,6 +10,4 @@ build:
 run:
   persistenceMount: /data
   containerPort: 8080
-  command: docker build -t misis-tg -f ./misis-tg/Dockerfile . && docker run -d -u     root
-    --name misis-tg -v     /data/4bb1be19-6baf-40ce-9bf9-784d4afcf59a/:/root/.microsoft/usersecrets/4bb1be19-6baf-40ce-9bf9-784d4afcf59a/:ro
-    misis-tg
+  args: -d -u  root -v     /data/4bb1be19-6baf-40ce-9bf9-784d4afcf59a/:/root/.microsoft/usersecrets/4bb1be19-6baf-40ce-9bf9-784d4afcf59a/:ro
